@@ -1,0 +1,9 @@
+main {
+  min-height: 100vh;
+  height: 100%;
+}
+
+main div:first-of-type img {
+  width: 85vw;
+  margin-bottom: 5vw;
+}

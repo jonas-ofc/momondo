@@ -1,0 +1,88 @@
+/PLAN IMORGEN!!
+- DELETE BUTTON SKAL VÆRE TRASHBASKET
+- STYLE FLIGHTS
+- STYLE UPLOAD IMAGE
+- STYLE HARDCODED PAGES
+- LAV OVERSÆTTELSE PÅ ALLE SIDER
+- STYLE EMAIL RESPONS/VALIDERING
+
+
+
+
+
+Hand-in: On wiseflow
+What to hand-in: All the code
+Hand-in format: All the code in a ZIP file
+When to hand-in: You will receive an email from administration with the date
+Questions: In our Team's channel
+
+
+Every point MUST be done!
+
+
+Create a website that "looks like" momondo or you decide the look and feel, 
+as far as it is easy to navigate and has the following functionality:
+
+
+Multi language page. At least 2 languages. Tip: Use a "dictionary.php" to keep the data
+
+
+If the user logs in correctly, then it acts as an administrator and should be able to delete any flight from the system. 
+Tip: When the user logs in, use a session to make sure that the user can access the Admin page. 
+
+The flights come from the database "momondo.db" that we have created. Next to each flight, 
+you should show a "trash/wastebasket" and when clicked, 
+the flight should be deleted from the user interface as well as from the database. 
+This should be done with an Ajax/Fetch request and an API. This was done in the class.
+
+The website must have at least 5 pages that contain some hard-coded DOM elements, 
+images and look as professional as possible. Tip: Copy the images, colors, and positioning from momondo
+
+Validation must happen everywhere in the front-end as well as in the back-end. 
+Tip: Use the validation libraries we have created in the class. The "_x.php" and the "validator.js" files. 
+Expand them, change them, or anything you need to improve it
+
+All pages should be accessed via a friendly URL. Tip: Use the ".htaccess"
+
+Create a page, anywhere in the system, where the user can upload an image. 
+Tip: You can check the code produced in the class, or the video link in this document to make it happen
+
+Arrange the code in files, folders, components or in any way that makes sense to you
+
+
+
+
+//MISSING!!!!!!!!!!!!!!!
+
+- HTACCES!!!
+- SIDE HVOR MAN KAN TILFØJE BILLEDE!!
+- SWEET ALERT PÅ FLIGHTS!!
+- DELETE FLIGHT
+
+- VALIDATE PASSWORD WITH REGEX
+- VALIDATE CONFIRM PASSWORD FRONTEND
+- VALIDATE FIRST AND LAST name
+- //VALLIDATE ALL THE OTHER THINGS FOR EMAIL AND THEN COMPARE
+
+
+
+//DOOOONE:
+
+A user can login agains a hard-coded email and password. 
+Tip: The hard-coded email could be "a@a.com" and the password "password".
+
+A user can logout. Tip: Just create a bridge that destroys the session
+
+A user enters a city name in a "from" and a "to" in some input fields and results will show up. 
+Tip: Use AJAX/Fetch to get results from an API
+
+A user can do a fake "signup". 
+Meaning that the system will respond with a success signup if all the data is passed and verified correctly, 
+or the system replies with an error. 
+Tip: Create an API that validates for example the user_name, user_email, user_password, user_confirm_password,
+etc… and make sure that those values are validated. The response can just display a sweet alert.
+
+If a user tries to "sign up" using an email that is hard-coded in the system, 
+then the UI should notify the user that the email is already registered. 
+All this, before the user even submits the form. 
+Tip: This could be done on a "onblur" event, using AJAX and an API

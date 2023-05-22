@@ -1,0 +1,373 @@
+main {
+  min-height: 100vh;
+
+  height: 100%;
+}
+
+#city-search input,
+#date-container input {
+  background-image: url("icon_plane.png");
+  background-size: 10%;
+  background-position: 10%;
+  background-repeat: no-repeat;
+
+  text-indent: 23%;
+  height: 4rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  outline: 0;
+  border-radius: 1.1vw;
+  border: none;
+  color: black;
+  background-color: rgb(243, 240, 245);
+}
+div#flights_wrapper {
+  width: 100%;
+  padding: 1vw 0vw;
+  padding-right: 1vw;
+  overflow: visible;
+  z-index: 100;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  gap: 1vw;
+  margin-bottom: 5vw;
+  margin-top: 1vw;
+}
+
+div#flight-search {
+  overflow: visible;
+  /*  z-index: 1; */
+  width: 100vw;
+  min-height: fit-content;
+
+  /*  padding: 3vw 1vw 1vw 0; */
+  background: rgb(33, 3, 58);
+  display: flex;
+  flex-direction: column;
+}
+
+div#flight-search h4 {
+  color: black;
+}
+
+#flight-search-button {
+  color: white;
+  background: none;
+  border: none;
+  fill: rgb(255, 255, 255);
+  width: 9vw;
+  height: 100%;
+  text-decoration: none;
+}
+#flight-search-button svg g circle {
+  fill: rgb(185, 19, 97);
+}
+
+#flight-search-button svg text {
+  color: white;
+  font-size: 6vw;
+  z-index: 9999;
+}
+
+div#flight-search form {
+  z-index: 1;
+  align-items: center;
+  border-radius: 1.1vw;
+  width: 100%;
+  height: auto;
+  padding: 0.4rem;
+  background-color: rgb(0, 149, 204);
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+div#flight-search form div#city-search {
+  display: flex;
+  width: 50%;
+  gap: 0.5rem;
+}
+
+div#flight-search form div#date-container {
+  width: 50%;
+  display: flex;
+  border-radius: 1.1vw;
+  overflow: hidden;
+  background-color: rgb(243, 240, 245);
+}
+
+div#flight-search form div#date-container .date-input {
+  border-radius: 0;
+  background-image: url("icon_calendar.png");
+  background-size: 10%;
+  background-position: 10%;
+  background-repeat: no-repeat;
+}
+
+div#date-container .change-date {
+  display: flex;
+  background-color: rgb(243, 240, 245);
+  gap: 1vw;
+  margin-right: 1.5vw;
+}
+
+div#date-container div#date-from,
+div#date-container div#date-to {
+  display: flex;
+}
+
+div#date-container .change-date button img {
+  height: 0.65rem;
+  width: 0.5rem;
+}
+
+div#date-container .change-date .arrow-right {
+  transform: scaleX(-1);
+  background-color: rgb(243, 240, 245);
+}
+
+div#flight-search form div#shift-button {
+  cursor: pointer;
+  height: 4rem;
+  z-index: 20;
+}
+
+div#flight-search form button {
+  height: 4rem;
+  outline: 0;
+  border: none;
+}
+
+div#flight-search form button img {
+  height: 4rem;
+  width: 8rem;
+  flex-direction: row;
+}
+
+div#flight-search div#from-container {
+  width: 100%;
+  height: fit-content;
+  overflow: visible;
+  z-index: 1000;
+}
+
+div#flight-search div#from-container div#from-results {
+  display: none;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin-top: 0.4rem;
+  /* min-width: fit-content; */
+  width: 50vw;
+  height: fit-content;
+  max-height: 20rem;
+  background: rgb(243, 240, 245);
+  position: absolute;
+  border-radius: 0 1.1vw 1.1vw 1.1vw;
+  z-index: 1000;
+}
+
+div.from-city,
+div.to-city {
+  color: black;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 2vw;
+  /* justify-content: space-between; */
+  padding: 1rem;
+  cursor: pointer;
+}
+div.from-city:hover,
+div.to-city:hover {
+  background-color: #88888870;
+}
+
+div.from-city div:nth-of-type(1),
+div.to-city div:nth-of-type(1) {
+  width: 100%;
+  pointer-events: none;
+}
+
+div.from-city div:nth-of-type(2),
+div.to-city div:nth-of-type(2) {
+  width: 8vw;
+  pointer-events: none;
+}
+
+div.from-city img {
+  width: 7vw;
+  pointer-events: none;
+  border-radius: 0.8vw;
+}
+
+div.to-city img {
+  width: 7vw;
+  pointer-events: none;
+  border-radius: 0.8vw;
+}
+
+div.from-city p,
+div.to-city p {
+  color: black;
+  pointer-events: none;
+}
+
+div#flight-search div#to-container {
+  width: 100%;
+}
+
+div#flight-search div#to-container div#to-results {
+  display: none;
+  margin-top: 0.4rem;
+  width: 50vw;
+  height: fit-content;
+  max-height: 20rem;
+  background: white;
+  position: absolute;
+  border-radius: 0 1.1vw 1.1vw 1.1vw;
+  z-index: 10;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+/* div.to-city {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+} */
+
+#searchedFlights {
+  margin-left: -0.5vw;
+
+  align-self: center;
+  display: grid;
+  grid-template-columns: auto max-content auto;
+
+  gap: 1vw;
+
+  width: 100%;
+  padding: 1vw 0vw;
+  padding-right: 1vw;
+}
+
+.flight-form {
+  width: fit-content;
+  height: fit-content;
+  grid-column: 2/3;
+}
+
+.flight {
+  color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  width: 65vw;
+  background-color: white;
+  border-radius: 1vw;
+  height: 15vw;
+  padding: 1vw;
+}
+
+.flight h3,
+.flight h4,
+.flight h5,
+p {
+  color: black;
+}
+
+.flight img {
+  width: 100%;
+  grid-row: 1/1;
+  grid-column: 1/2;
+}
+
+.flight_departure_wrapper {
+  grid-row: 2/4;
+  grid-column: 2/3;
+}
+
+.flight-departure-date-wrapper {
+  grid-row: 2/4;
+  grid-column: 1/2;
+  align-self: center;
+  justify-self: center;
+}
+
+.streg-wrapper {
+}
+
+.flight-price-wrapper {
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 5px 5px #888888;
+  width: 10vw;
+  grid-row: 1/3;
+  grid-column: 4/4;
+  justify-self: end;
+  margin-right: 2vw;
+  padding: 0.5vw;
+  border-radius: 0.4vw;
+  background-color: rgb(21, 152, 109);
+  color: white;
+}
+
+.flight-price-wrapper h4,
+.flight-price-wrapper h3 {
+  color: white;
+}
+
+.flight-arrival-wrapper {
+  grid-row: 2/4;
+  grid-column: 3/3;
+}
+
+.flight .flight_delete_button {
+  grid-row: 3/5;
+  grid-column: 4/4;
+  text-align: center;
+  box-shadow: 5px 5px #888888;
+  width: 10vw;
+  height: 4vw;
+  font-size: larger;
+  justify-self: end;
+  margin-right: 2vw;
+  padding: 0.5vw;
+  border: none;
+  border-radius: 0.4vw;
+  background-color: rgb(152, 21, 21);
+  color: black;
+  cursor: pointer;
+}
+
+[data-rights="admin"] .flight .flight_delete_button {
+  display: block;
+}
+[data-rights="guest"] .flight .flight_delete_button {
+  display: none;
+}
+[data-rights="user"] .flight .flight_delete_button {
+  display: none;
+}
+
+@keyframes aniDeleteBlink {
+  from {
+    opacity: 100%;
+    background-color: yellow;
+  }
+  to {
+    opacity: 0%;
+    background-color: red;
+  }
+}
+
+.deleteBlink {
+  animation-name: aniDeleteBlink;
+  animation-duration: 2s;
+}
