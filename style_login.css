@@ -1,0 +1,36 @@
+* {
+  text-align: center;
+}
+
+main {
+  z-index: 1;
+  color: black;
+  margin-top: 1vw;
+  margin: 0 auto;
+
+  margin-top: 13vw;
+  background: white;
+  height: fit-content;
+  width: 35vw;
+  border-radius: 1vw;
+  padding: 2vw;
+}
+
+main p {
+  color: black;
+}
+
+.guest-wrapper {
+  gap: 2vw;
+  display: flex;
+  flex-direction: column;
+}
+.guest-wrapper button {
+  padding: 0.5vw 0vw;
+  background-color: rgb(21, 152, 109);
+  color: white;
+  border: none;
+  border-radius: 0.5vw;
+  width: 10vw;
+  cursor: pointer;
+}
